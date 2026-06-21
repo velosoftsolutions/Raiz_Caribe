@@ -1,0 +1,328 @@
+.hero-lab{
+height:100vh;
+background:url('../assets/agrolab/hero-nosotros.JPG') no-repeat;
+background-size:cover;
+background-position:center;
+position:relative;
+display:flex;
+align-items:center;
+color:#ffff;
+}
+
+.hero-lab .overlay{
+position:absolute;
+inset:0;
+background:rgba(0,0,0,.55);
+}
+
+.hero-content{
+position:relative;
+z-index:2;
+max-width:700px;
+}
+
+.hero-content h1{
+font-size:2.5rem;
+margin:15px 0;
+}
+
+.tag,
+.section-tag{
+display:inline-block;
+padding:5px 18px;
+background:#dcebc6;
+color:#35501f;
+border-radius:30px;
+font-weight:600;
+margin-bottom:10px;
+text-align:justify;
+}.lab-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:60px;
+align-items:center;
+}
+
+.lab-grid img{
+width:100%;
+height:320px;
+border-radius:30px;
+
+box-shadow:
+0 25px 60px rgba(0,0,0,.12);
+
+transition:.4s ease;
+}
+
+.lab-grid img:hover{
+transform:translateY(-8px) scale(1.02);
+}
+
+.mision-vision-lab{
+ background:linear-gradient(
+          135deg,
+        #F7F2E8,
+        #EEF3E3
+    );
+}
+
+.mv-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+}
+
+.mv-card{
+background:#f8f9f4;
+padding:40px;
+border-radius:24px;
+text-align:justify;
+
+border:1px solid #edf0ea;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.05);
+
+transition:.35s ease;
+}
+
+.mv-card:hover{
+transform:translateY(-8px);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.10);
+}
+
+.programas-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+}
+
+.programa-card{
+background:#fff;
+
+border-radius:24px;
+overflow:hidden;
+
+cursor:pointer;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.08);
+
+transition:.35s ease;
+}
+
+.programa-card img{
+width:100%;
+height:280px;
+object-fit:cover;
+display:block;
+
+transition:.5s ease;
+}
+
+.programa-card:hover{
+transform:translateY(-10px);
+}
+
+.programa-card:hover img{
+transform:scale(1.08);
+}
+
+.inscripcion{
+background:#f8f9f4;
+}
+
+.asesorias{
+    background:#f8f9f4;
+}
+.asesorias-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:25px;
+margin-top:40px;
+}
+
+.asesoria-card{
+background:#fff;
+
+padding:30px 20px;
+
+border-radius:24px;
+
+text-align:center;
+
+font-weight:600;
+
+color:#35501f;
+
+border:1px solid #edf0ea;
+
+box-shadow:
+0 12px 30px rgba(0,0,0,.06);
+
+transition:.35s ease;
+
+cursor:pointer;
+}
+
+.asesoria-card:hover{
+transform:translateY(-10px);
+
+box-shadow:
+0 20px 40px rgba(0,0,0,.12);
+}
+
+#formAgrolab{
+max-width:700px;
+margin:auto;
+
+display:flex;
+flex-direction:column;
+gap:18px;
+
+background:#fff;
+
+padding:40px;
+
+border-radius:28px;
+
+border:1px solid #edf0ea;
+
+box-shadow:
+0 20px 50px rgba(0,0,0,.06);
+
+position:relative;
+
+overflow:hidden;
+}
+
+#formAgrolab::before{
+content:"";
+
+position:absolute;
+
+width:180px;
+height:180px;
+
+background:#dcebc6;
+
+border-radius:50%;
+
+top:-80px;
+right:-80px;
+
+opacity:.5;
+}
+
+#formAgrolab input,
+#formAgrolab textarea{
+padding:16px 18px;
+
+border:1px solid #dfe4d8;
+
+border-radius:14px;
+
+font-family:Poppins;
+font-size:.95rem;
+
+background:#fafcf8;
+
+transition:.3s ease;
+
+position:relative;
+z-index:2;
+}
+
+#formAgrolab textarea{
+height:160px;
+resize:none;
+}
+
+#formAgrolab input:focus,
+#formAgrolab textarea:focus{
+outline:none;
+
+border-color:#7c9f43;
+
+background:#fff;
+
+box-shadow:
+0 0 0 4px rgba(124,159,67,.12);
+}
+
+#formAgrolab button{
+background:#7c9f43;
+
+color:#fff;
+
+border:none;
+
+padding:16px;
+
+border-radius:14px;
+
+font-family:Poppins;
+font-size:1rem;
+font-weight:600;
+
+cursor:pointer;
+
+transition:.3s ease;
+
+position:relative;
+z-index:2;
+}
+
+#formAgrolab button:hover{
+transform:translateY(-3px);
+
+box-shadow:
+0 12px 25px rgba(124,159,67,.25);
+}
+
+@media(max-width:992px){
+
+.lab-grid,
+.mv-grid,
+.asesorias-grid{
+grid-template-columns:1fr;
+gap:30px;
+}
+
+.lab-grid img{
+height:350px;
+}
+
+.asesorias-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+@media(max-width:768px){
+
+.hero-content h1{
+font-size:2rem;
+}
+
+.lab-grid img{
+height:280px;
+}
+
+.mv-card,
+.asesoria-card{
+padding:25px;
+}
+
+#formAgrolab{
+padding:25px;
+border-radius:22px;
+}
+
+.asesorias-grid{
+grid-template-columns:1fr;
+}
+
+}

@@ -1,0 +1,103 @@
+.header{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+z-index:9999;
+background:rgba(245, 240, 240, 0.938);
+backdrop-filter:blur(12px);
+-webkit-backdrop-filter:blur(12px);
+transition:.4s ease;
+}
+
+.header-container{
+display:flex;
+align-items:center;
+height:75px;
+}
+
+.logo{
+margin-right:auto;
+}
+
+.nav{
+margin-right:30px;
+}
+
+.nav a{
+position:relative;
+text-decoration:none;
+color:rgb(19, 18, 18);
+font-weight:500;
+transition:.3s;
+
+}
+
+.logo img{
+height:65px;
+}
+
+.nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-8px;
+width:0;
+height:2px;
+background:#8bb248;
+transition:.4s;
+}
+
+.nav a:hover::after{
+width:100%;
+}
+
+.nav a:hover{
+color:#8bb248;
+}
+
+.nav ul{
+display:flex;
+gap:30px;
+list-style:none;
+}
+
+.btn-header{
+background:#5b7f2a;
+color:white;
+padding:12px 22px;
+border-radius:30px;
+text-decoration:none;
+}
+
+.hamburger{
+display:none;
+cursor:pointer;
+}
+
+.hamburger span{
+display:block;
+width:25px;
+height:3px;
+background:#333;
+margin:5px;
+}
+
+.header-scroll{
+background:rgba(255,255,255,.98);
+backdrop-filter:blur(20px);
+box-shadow:
+0 10px 30px rgba(0,0,0,.08);
+
+}
+
+.header-scroll .nav a{
+color:#222;
+}
+
+.header-scroll .hamburger span{
+background:#222;
+}
+.sidebar-btn{
+display:none;
+}
